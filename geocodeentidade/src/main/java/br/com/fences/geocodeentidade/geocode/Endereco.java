@@ -1,5 +1,7 @@
 package br.com.fences.geocodeentidade.geocode;
 
+import br.com.fences.geocodeentidade.geocode.geojson.Point;
+
 public class Endereco {
 
 	private String logradouro;
@@ -9,11 +11,9 @@ public class Endereco {
 	private String cidade;
 	private String uf;
 	private String cep;
-	private String latitude;
-	private String longitude;
 	private String geocodeStatus;
 	private String ultimaAtualizacao;
-	
+	private Point geometry = new Point();
 	
 	public String getLogradouro() {
 		return logradouro;
@@ -57,18 +57,6 @@ public class Endereco {
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
-	public String getLatitude() {
-		return latitude;
-	}
-	public void setLatitude(String latitude) {
-		this.latitude = latitude;
-	}
-	public String getLongitude() {
-		return longitude;
-	}
-	public void setLongitude(String longitude) {
-		this.longitude = longitude;
-	}
 	public String getGeocodeStatus() {
 		return geocodeStatus;
 	}
@@ -80,5 +68,11 @@ public class Endereco {
 	}
 	public void setUltimaAtualizacao(String ultimaAtualizacao) {
 		this.ultimaAtualizacao = ultimaAtualizacao;
+	}
+	public Point getGeometry() {
+		return geometry;
+	}
+	public void setGeometry(Point geometry) {
+		this.geometry = geometry;
 	}
 }
