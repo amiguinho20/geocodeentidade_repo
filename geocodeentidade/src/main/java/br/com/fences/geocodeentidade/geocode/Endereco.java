@@ -1,8 +1,10 @@
 package br.com.fences.geocodeentidade.geocode;
 
+import java.io.Serializable;
+
 import br.com.fences.geocodeentidade.geocode.geojson.Point;
 
-public class Endereco {
+public class Endereco implements Serializable{
 
 	private String logradouro;
 	private String numero;
